@@ -1,0 +1,37 @@
+# Secrets - never commit
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node
+node_modules/
+dashboard/dist/
+
+# Logs and local tool settings
+*.log
+room-agent/logs/
+.claude/settings.local.json
+
+# Word copy of the plan (docs/BUILD_PLAN.md is the committed version)
+docs/*.docx
+
+# Recorded test videos - never commit or upload
+clips/
+
+# SQLite database
+*.db
+*.sqlite
+*.sqlite3
+
+# MediaPipe model files (downloaded, not committed)
+room-agent/models/*.task
+
+# Generated speech for the fixed phrases (made again when missing)
+room-agent/voice/phrases/
+
+# Logs and process list written by start.bat / scripts/run_guardian.py
+logs/

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardian:room:voice_reply",
+  "title": "Room agent -> server: what was heard after a speak_and_listen command",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "incident_id", "attempt", "transcript", "heard_speech"],
+  "properties": {
+    "type": {"const": "voice_reply"},
+    "incident_id": {"$ref": "urn:guardian:common#/$defs/incident_id"},
+    "attempt": {"type": "integer", "minimum": 1},
+    "transcript": {"type": "string"},
+    "heard_speech": {"type": "boolean"}
+  }
+}

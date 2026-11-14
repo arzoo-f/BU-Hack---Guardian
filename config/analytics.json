@@ -1,0 +1,8 @@
+{
+  "utc_offset_hours": 8,
+  "history_days": 7,
+  "active_activities": ["standing", "walking"],
+  "still_activities": ["sitting", "lying"],
+  "row_gap_cap_s": 10,
+  "insight_change_pct": 10
+}

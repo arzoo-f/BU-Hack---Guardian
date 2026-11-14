@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardian:dashboard:status",
+  "title": "Server -> dashboard: room heartbeat plus the open incident and its state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "ts", "camera", "fps", "incident_id", "state"],
+  "properties": {
+    "type": {"const": "status"},
+    "ts": {"$ref": "urn:guardian:common#/$defs/ts"},
+    "camera": {"$ref": "urn:guardian:common#/$defs/camera"},
+    "fps": {"$ref": "urn:guardian:common#/$defs/fps"},
+    "incident_id": {"$ref": "urn:guardian:common#/$defs/incident_id_or_null"},
+    "state": {"$ref": "urn:guardian:common#/$defs/state"}
+  }
+}

@@ -1,0 +1,1 @@
+{"type": "fall_detected", "ts": "2026-11-14T10:07:12Z", "incident_id": "inc_001", "reason": "fast_fall", "features": {"drop_speed": 1.9, "torso_angle": 78, "seconds_low": 3.2}}

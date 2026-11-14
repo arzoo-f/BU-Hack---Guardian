@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardian:dashboard:pose",
+  "title": "Server -> dashboard: live keypoints for the skeleton (never stored)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "ts", "keypoints", "incident_id", "state"],
+  "properties": {
+    "type": {"const": "pose"},
+    "ts": {"$ref": "urn:guardian:common#/$defs/ts"},
+    "keypoints": {"$ref": "urn:guardian:common#/$defs/keypoints"},
+    "incident_id": {"$ref": "urn:guardian:common#/$defs/incident_id_or_null"},
+    "state": {"$ref": "urn:guardian:common#/$defs/state"}
+  }
+}

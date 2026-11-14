@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardian:command:speak_and_listen",
+  "title": "Server -> room agent: say the text, then listen and reply with voice_reply",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "incident_id", "text", "listen_seconds"],
+  "properties": {
+    "type": {"const": "speak_and_listen"},
+    "incident_id": {"$ref": "urn:guardian:common#/$defs/incident_id"},
+    "text": {"type": "string", "minLength": 1},
+    "listen_seconds": {"type": "number", "exclusiveMinimum": 0, "maximum": 30},
+    "attempt": {
+      "description": "Number of this question within the incident (D-009). The room agent copies it into its voice_reply, so a lost command cannot put the two sides out of step.",
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}

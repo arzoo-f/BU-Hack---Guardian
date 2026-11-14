@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardian:room:fall_detected",
+  "title": "Room agent -> server: a confirmed fall (fast_fall) or a person found on the floor (found_on_floor)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "ts", "incident_id", "reason", "features"],
+  "properties": {
+    "type": {"const": "fall_detected"},
+    "ts": {"$ref": "urn:guardian:common#/$defs/ts"},
+    "incident_id": {"$ref": "urn:guardian:common#/$defs/incident_id"},
+    "reason": {"$ref": "urn:guardian:common#/$defs/fall_reason"},
+    "features": {
+      "description": "Feature values at detection, e.g. drop_speed, torso_angle, seconds_low",
+      "type": "object",
+      "additionalProperties": {"type": ["number", "null"]}
+    }
+  }
+}

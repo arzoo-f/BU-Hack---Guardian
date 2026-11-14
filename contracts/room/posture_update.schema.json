@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardian:room:posture_update",
+  "title": "Room agent -> server: smoothed activity changed during an incident (did the person get up?)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "incident_id", "activity"],
+  "properties": {
+    "type": {"const": "posture_update"},
+    "incident_id": {"$ref": "urn:guardian:common#/$defs/incident_id"},
+    "activity": {"$ref": "urn:guardian:common#/$defs/activity"}
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "tts_instructions": "Speak calmly, warmly and clearly, a little slowly, to an older person who may have fallen.",
+  "phrases_dir": "room-agent/voice/phrases",
+  "fallback_rate_wpm": 150,
+  "listen_after_playback_s": 0.2,
+  "trim_silence_db": -45,
+  "keep_before_speech_s": 0.05,
+  "keep_after_speech_s": 0.15,
+  "noise_sample_s": 0.5,
+  "reuse_noise_for_s": 30,
+  "stt_language": "en",
+  "speech_window_s": 0.5,
+  "speech_margin_db": 12,
+  "min_speech_dbfs": -60,
+  "stt_timeout_s": 8
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardian:dashboard:activity",
+  "title": "Server -> dashboard: current activity plus the open incident and its state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "ts", "room", "activity", "confidence", "zone", "incident_id", "state"],
+  "properties": {
+    "type": {"const": "activity"},
+    "ts": {"$ref": "urn:guardian:common#/$defs/ts"},
+    "room": {"$ref": "urn:guardian:common#/$defs/room"},
+    "activity": {"$ref": "urn:guardian:common#/$defs/activity"},
+    "confidence": {"$ref": "urn:guardian:common#/$defs/confidence"},
+    "zone": {"$ref": "urn:guardian:common#/$defs/zone"},
+    "incident_id": {"$ref": "urn:guardian:common#/$defs/incident_id_or_null"},
+    "state": {"$ref": "urn:guardian:common#/$defs/state"}
+  }
+}

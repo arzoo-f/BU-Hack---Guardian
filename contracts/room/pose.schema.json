@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardian:room:pose",
+  "title": "Room agent -> server: live keypoints (about 5 per second, never stored)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "ts", "keypoints"],
+  "properties": {
+    "type": {"const": "pose"},
+    "ts": {"$ref": "urn:guardian:common#/$defs/ts"},
+    "keypoints": {"$ref": "urn:guardian:common#/$defs/keypoints"}
+  }
+}

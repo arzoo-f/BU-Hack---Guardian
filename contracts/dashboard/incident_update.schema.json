@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardian:dashboard:incident_update",
+  "title": "Server -> dashboard: one new step of an incident (mirrors a row of incident_events, Section 12)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "ts", "incident_id", "state", "kind", "payload"],
+  "properties": {
+    "type": {"const": "incident_update"},
+    "ts": {"$ref": "urn:guardian:common#/$defs/ts"},
+    "incident_id": {"$ref": "urn:guardian:common#/$defs/incident_id"},
+    "state": {"$ref": "urn:guardian:common#/$defs/state"},
+    "kind": {
+      "type": "string",
+      "enum": ["state", "speak", "reply", "decision", "alert", "ack", "request"]
+    },
+    "payload": {"type": "object"},
+    "reason": {"$ref": "urn:guardian:common#/$defs/fall_reason"},
+    "simulated": {"type": "boolean"}
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardian:room:activity",
+  "title": "Room agent -> server: smoothed activity label (about every 2 s)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "ts", "room", "activity", "confidence", "zone"],
+  "properties": {
+    "type": {"const": "activity"},
+    "ts": {"$ref": "urn:guardian:common#/$defs/ts"},
+    "room": {"$ref": "urn:guardian:common#/$defs/room"},
+    "activity": {"$ref": "urn:guardian:common#/$defs/activity"},
+    "confidence": {"$ref": "urn:guardian:common#/$defs/confidence"},
+    "zone": {"$ref": "urn:guardian:common#/$defs/zone"}
+  }
+}

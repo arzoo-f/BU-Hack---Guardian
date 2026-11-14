@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" font-family="Segoe UI, system-ui, -apple-system, sans-serif">
+<defs><marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker></defs>
+<rect width="1600" height="960" fill="#ffffff"/>
+<text x="40" y="62" font-size="36" fill="#0f172a" font-weight="700" text-anchor="start">Guardian – how it works</text>
+<text x="40" y="98" font-size="19" fill="#64748b" font-weight="400" text-anchor="start">Three programs. Only stick-figure points and events leave the camera program: no video is stored or sent.</text>
+<rect x="30" y="130" width="880" height="560" rx="22" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="8 6"/>
+<text x="56" y="165" font-size="15" fill="#64748b" font-weight="700" text-anchor="start">ON THE LAPTOP IN THE ROOM</text>
+<rect x="60" y="190" width="340" height="470" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="60" y="190" width="340" height="8" rx="4" fill="#2a78d6"/>
+<text x="84" y="240" font-size="26" fill="#0f172a" font-weight="700" text-anchor="start">Room agent</text>
+<text x="84" y="267" font-size="15" fill="#64748b" font-weight="400" text-anchor="start">Python · MediaPipe · OpenCV</text>
+<circle cx="90" cy="304" r="3.5" fill="#2a78d6"/>
+<text x="104" y="310" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Camera → 33-point stick figure</text>
+<text x="104" y="335" font-size="17" fill="#334155" font-weight="400" text-anchor="start">(about 15 frames a second)</text>
+<circle cx="90" cy="366" r="3.5" fill="#2a78d6"/>
+<text x="104" y="372" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Activity: standing, walking,</text>
+<text x="104" y="397" font-size="17" fill="#334155" font-weight="400" text-anchor="start">sitting or lying</text>
+<circle cx="90" cy="428" r="3.5" fill="#2a78d6"/>
+<text x="104" y="434" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Fall: down within 3 s and</text>
+<text x="104" y="459" font-size="17" fill="#334155" font-weight="400" text-anchor="start">still down 3 s later</text>
+<circle cx="90" cy="490" r="3.5" fill="#2a78d6"/>
+<text x="104" y="496" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Asks “Are you okay?”</text>
+<text x="104" y="521" font-size="17" fill="#334155" font-weight="400" text-anchor="start">and listens for the answer</text>
+<rect x="80" y="598" width="300" height="42" rx="21" fill="#ecfdf5" stroke="#10b981" stroke-dasharray="5 4"/>
+<text x="230.0" y="625" font-size="15" fill="#047857" font-weight="600" text-anchor="middle">Video and sound stay in here</text>
+<rect x="540" y="190" width="340" height="470" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="540" y="190" width="340" height="8" rx="4" fill="#2a78d6"/>
+<text x="564" y="240" font-size="26" fill="#0f172a" font-weight="700" text-anchor="start">Guardian server</text>
+<text x="564" y="267" font-size="15" fill="#64748b" font-weight="400" text-anchor="start">Python · FastAPI · SQLite</text>
+<circle cx="570" cy="304" r="3.5" fill="#2a78d6"/>
+<text x="584" y="310" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Check-in: ask, ask again,</text>
+<text x="584" y="335" font-size="17" fill="#334155" font-weight="400" text-anchor="start">then alert the family</text>
+<circle cx="570" cy="366" r="3.5" fill="#2a78d6"/>
+<text x="584" y="372" font-size="17" fill="#334155" font-weight="400" text-anchor="start">5 safety rules in code, e.g.</text>
+<text x="584" y="397" font-size="17" fill="#334155" font-weight="400" text-anchor="start">“help” always alerts at once</text>
+<circle cx="570" cy="428" r="3.5" fill="#2a78d6"/>
+<text x="584" y="434" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Keeps every incident step</text>
+<text x="584" y="459" font-size="17" fill="#334155" font-weight="400" text-anchor="start">and the activity history</text>
+<circle cx="570" cy="490" r="3.5" fill="#2a78d6"/>
+<text x="584" y="496" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Daily mobility insights</text>
+<line x1="400" y1="330" x2="540" y2="330" stroke="#64748b" stroke-width="2" marker-end="url(#head)"/>
+<text x="470" y="296" font-size="14" fill="#334155" font-weight="400" text-anchor="middle">stick figure, activity,</text>
+<text x="470" y="314" font-size="14" fill="#334155" font-weight="400" text-anchor="middle">falls, answers</text>
+<line x1="540" y1="420" x2="400" y2="420" stroke="#64748b" stroke-width="2" marker-end="url(#head)"/>
+<text x="470" y="445" font-size="14" fill="#334155" font-weight="400" text-anchor="middle">“ask” and “say”</text>
+<text x="470" y="463" font-size="14" fill="#334155" font-weight="400" text-anchor="middle">commands</text>
+<text x="470" y="500" font-size="13" fill="#64748b" font-weight="600" text-anchor="middle">WebSocket</text>
+<rect x="1040" y="190" width="520" height="220" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="1040" y="190" width="520" height="8" rx="4" fill="#2a78d6"/>
+<text x="1064" y="240" font-size="26" fill="#0f172a" font-weight="700" text-anchor="start">Dashboard</text>
+<text x="1064" y="267" font-size="15" fill="#64748b" font-weight="400" text-anchor="start">React · Vite · Tailwind · Recharts, in any browser</text>
+<circle cx="1070" cy="304" r="3.5" fill="#2a78d6"/>
+<text x="1084" y="310" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Live status, stick figure, what was heard and why</text>
+<circle cx="1070" cy="341" r="3.5" fill="#2a78d6"/>
+<text x="1084" y="347" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Acknowledge button and every incident step</text>
+<circle cx="1070" cy="378" r="3.5" fill="#2a78d6"/>
+<text x="1084" y="384" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Today’s activity band and 7-day insights</text>
+<rect x="1040" y="450" width="520" height="240" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="1040" y="450" width="520" height="8" rx="4" fill="#94a3b8"/>
+<text x="1064" y="500" font-size="26" fill="#0f172a" font-weight="700" text-anchor="start">Family on Telegram</text>
+<text x="1064" y="527" font-size="15" fill="#64748b" font-weight="400" text-anchor="start">Bot API · the team’s own test group</text>
+<circle cx="1070" cy="564" r="3.5" fill="#94a3b8"/>
+<text x="1084" y="570" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Alert with a stick-figure picture (never a photo)</text>
+<circle cx="1070" cy="601" r="3.5" fill="#94a3b8"/>
+<text x="1084" y="607" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Acknowledge button stops the reminders</text>
+<circle cx="1070" cy="638" r="3.5" fill="#94a3b8"/>
+<text x="1084" y="644" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Gentle note for small requests (“some water”)</text>
+<line x1="880" y1="300" x2="1040" y2="300" stroke="#64748b" stroke-width="2" marker-end="url(#head)" marker-start="url(#head)"/>
+<text x="978" y="286" font-size="13" fill="#64748b" font-weight="600" text-anchor="middle">WebSocket + REST</text>
+<line x1="880" y1="560" x2="1040" y2="560" stroke="#64748b" stroke-width="2" marker-end="url(#head)" marker-start="url(#head)"/>
+<text x="975" y="546" font-size="13" fill="#64748b" font-weight="600" text-anchor="middle">HTTPS</text>
+<rect x="60" y="770" width="820" height="160" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="60" y="770" width="820" height="8" rx="4" fill="#94a3b8"/>
+<text x="84" y="815" font-size="24" fill="#0f172a" font-weight="700" text-anchor="start">OpenAI (over the internet)</text>
+<text x="84" y="852" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Speech: question text → voice;</text>
+<text x="84" y="877" font-size="17" fill="#334155" font-weight="400" text-anchor="start">the recorded answer → text</text>
+<text x="500" y="852" font-size="17" fill="#334155" font-weight="400" text-anchor="start">Decision: reads the incident facts, answers</text>
+<text x="500" y="877" font-size="17" fill="#334155" font-weight="400" text-anchor="start">in a fixed format within 5 s; if it fails,</text>
+<text x="500" y="902" font-size="17" fill="#334155" font-weight="400" text-anchor="start">the safety rules decide on their own</text>
+<line x1="230" y1="660" x2="230" y2="770" stroke="#64748b" stroke-width="2" marker-end="url(#head)" marker-start="url(#head)"/>
+<text x="244" y="722" font-size="14" fill="#334155" font-weight="400" text-anchor="start">short answer audio, question text</text>
+<line x1="710" y1="660" x2="710" y2="770" stroke="#64748b" stroke-width="2" marker-end="url(#head)" marker-start="url(#head)"/>
+<text x="724" y="722" font-size="14" fill="#334155" font-weight="400" text-anchor="start">incident facts → decision</text>
+</svg>

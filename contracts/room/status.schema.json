@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardian:room:status",
+  "title": "Room agent -> server: heartbeat every 5 s (contract addition, BUILD_PLAN Section 5 row 10)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "ts", "camera", "fps"],
+  "properties": {
+    "type": {"const": "status"},
+    "ts": {"$ref": "urn:guardian:common#/$defs/ts"},
+    "camera": {"$ref": "urn:guardian:common#/$defs/camera"},
+    "fps": {"$ref": "urn:guardian:common#/$defs/fps"}
+  }
+}

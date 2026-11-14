@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardian:ai_decision",
+  "title": "GPT structured output for a check-in decision (Section 12). Which actions are allowed depends on the state and is enforced in server/escalation.py (Rule 5).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["assessment", "action", "say", "request", "reason"],
+  "properties": {
+    "assessment": {"$ref": "urn:guardian:common#/$defs/assessment"},
+    "action": {"$ref": "urn:guardian:common#/$defs/action"},
+    "say": {"type": "string"},
+    "request": {"type": ["string", "null"]},
+    "reason": {"type": "string", "minLength": 1}
+  }
+}

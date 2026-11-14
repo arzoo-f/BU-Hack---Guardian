@@ -1,0 +1,21 @@
+{
+  "checkin1_listen_s": 6,
+  "checkin2_listen_s": 8,
+  "followup_listen_s": 8,
+  "reply_grace_s": 15,
+  "floor_rule_s": 90,
+  "realert_every_s": 120,
+  "alert_retry_s": 15,
+  "ai_timeout_s": 5,
+  "max_say_chars": 120,
+  "activity_log_every_s": 2,
+  "camera_offline_alert_s": 120,
+  "help_keywords": ["help", "hurt", "pain", "can't get up", "cannot get up", "救命"],
+  "phrases": {
+    "checkin_1": "Are you okay? Please say yes or no.",
+    "checkin_2": "Can you hear me? Say yes if you are okay.",
+    "follow_up": "Glad you're okay. Do you need anything?",
+    "escalate": "I have messaged your family. Help is coming.",
+    "escalate_pending": "I am trying to reach your family."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardian:dashboard:decision",
+  "title": "Server -> dashboard: the decision taken for an incident and why (from the AI or a hard rule)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "ts", "incident_id", "state", "assessment", "action", "say", "request", "reason"],
+  "properties": {
+    "type": {"const": "decision"},
+    "ts": {"$ref": "urn:guardian:common#/$defs/ts"},
+    "incident_id": {"$ref": "urn:guardian:common#/$defs/incident_id"},
+    "state": {"$ref": "urn:guardian:common#/$defs/state"},
+    "assessment": {"$ref": "urn:guardian:common#/$defs/assessment"},
+    "action": {"$ref": "urn:guardian:common#/$defs/action"},
+    "say": {"type": "string"},
+    "request": {"type": ["string", "null"]},
+    "reason": {"type": "string", "minLength": 1},
+    "source": {
+      "description": "Who decided: the AI, or a hard rule in code (Section 14)",
+      "type": "string",
+      "enum": ["ai", "hard_rule"]
+    },
+    "rule": {"type": "integer", "minimum": 1, "maximum": 5}
+  }
+}
